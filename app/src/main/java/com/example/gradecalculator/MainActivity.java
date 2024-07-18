@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         subjects = loadSubjects();
 
-        subjectAdapter = new SubjectAdapter(subjects, this); // Pass 'this' (MainActivity instance)
+        subjectAdapter = new SubjectAdapter(subjects, this);
         recyclerViewSubjects.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewSubjects.setAdapter(subjectAdapter);
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonAddSubject.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, AddSubjectActivity.class);
-            // Pass the existing subject names to the AddSubjectActivity
+
             intent.putExtra("existingSubjects", subjectsToStringArray());
             addSubjectLauncher.launch(intent);
         });

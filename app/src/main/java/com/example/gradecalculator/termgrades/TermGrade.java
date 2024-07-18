@@ -86,7 +86,7 @@ public abstract class TermGrade extends AppCompatActivity {
         buttonRemove.setText(R.string.remove_button_text);
         buttonRemove.setOnClickListener(v -> {
             tableLayout.removeView(row);
-            calculateGrades(); // Trigger calculation after removing row
+            calculateGrades();
         });
 
         row.addView(etScore);
@@ -142,7 +142,7 @@ public abstract class TermGrade extends AppCompatActivity {
         for (int i = 1; i < tableLayout.getChildCount(); i++) {
             TableRow row = (TableRow) tableLayout.getChildAt(i);
             StringBuilder rowData = new StringBuilder();
-            for (int j = 0; j < row.getChildCount() - 1; j++) { // Exclude the remove button
+            for (int j = 0; j < row.getChildCount() - 1; j++) {
                 EditText editText = (EditText) row.getChildAt(j);
                 String input = editText.getText().toString().trim();
                 rowData.append(input).append(",");
