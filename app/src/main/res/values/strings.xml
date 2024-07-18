@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Grade Calculator</string>
+    <string name="add_subject">Add Subject</string>
+    <string name="midterm">Midterm</string>
+    <string name="final_term">Final Term</string>
+    <string name="back">Back</string>
+    <string name="create_subject">Create Subject</string>
+    <string name="enter_subject_name">Enter Subject Name</string>
+    <string name="add_column">Add Column</string>
+    <string name="add_row">Add Row</string>
+    <string name="grade_calculator">Grade Calculator</string>
+    <string name="delete_button_text">Delete</string>
+    <string name="calculated_grade_format">Calculated Grade: %.2f%%</string>
+    <string name="invalid_input">Invalid input. Please enter numeric values for scores and weights.</string>
+    <string name="remove_button_text">Remove</string>
+    <string name="remove_row_confirmation_title">Remove Row</string>
+    <string name="remove_row_confirmation_message">Are you sure you want to remove this row?</string>
+    <string name="confirm">Confirm</string>
+    <string name="row_removed_message">Row removed successfully</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok" />
+    <string name="invalid_input_message" />
+    <string name="invalid_input_title" />
+    <string name="activity_hint">Activity (optional)</string>
+</resources>

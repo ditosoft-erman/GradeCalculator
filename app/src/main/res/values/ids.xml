@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="labTableLayout" type="id" />
+    <item name="addRowLaboratoryButton" type="id" />
+    <item name="btnCalculateGrades" type="id" />
+    <item name="tvCalculatedGrades" type="id" />
+    <item name="tvLaboratory" type="id" />
+    <item name="addRowLectureButton" type="id" />
+    <item name="tvLecture" type="id" />
+</resources>

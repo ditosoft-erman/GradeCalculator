@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinalTermActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Back Button" />
+
+        <!-- Subject Selection -->
+        <TextView
+            android:id="@+id/tvSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Final Term"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Lecture Section -->
+        <TextView
+            android:id="@+id/tvLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lecture"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <TableLayout
+            android:id="@+id/lectureTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <!-- Header Row -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overall Score"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weights (%)"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Action"
+                    android:padding="8dp" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/addRowLectureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Lecture Row"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Add Lecture Row Button" />
+
+        <!-- Laboratory Section -->
+        <TextView
+            android:id="@+id/tvLaboratory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laboratory"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <TableLayout
+            android:id="@+id/labTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <!-- Header Row -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overall Score"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weights (%)"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Action"
+                    android:padding="8dp" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/addRowLaboratoryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Laboratory Row"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Add Laboratory Row Button" />
+
+        <!-- Button to Calculate Grades -->
+        <Button
+            android:id="@+id/btnCalculateGrades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Grades"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Calculate Grades Button" />
+
+        <!-- Display Calculated Grades -->
+        <TextView
+            android:id="@+id/tvCalculatedGrades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculated Grade: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Save Grade Button -->
+        <Button
+            android:id="@+id/btnSaveGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="saveGrade"
+            android:text="Save Grade"
+            android:contentDescription="Save Grade Button" />
+
+    </LinearLayout>
+</ScrollView>
