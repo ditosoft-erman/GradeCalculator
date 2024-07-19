@@ -10,7 +10,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityResultLauncher<Intent> addSubjectLauncher;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerViewSubjects = findViewById(R.id.recyclerViewSubjects);
         Button buttonAddSubject = findViewById(R.id.button_add_subject);
+        Button buttonOpenSavedGrades = findViewById(R.id.buttonOpenSavedGrades);
 
         sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
 
@@ -58,10 +61,15 @@ public class MainActivity extends AppCompatActivity {
 
         buttonAddSubject.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, AddSubjectActivity.class);
-
             intent.putExtra("existingSubjects", subjectsToStringArray());
             addSubjectLauncher.launch(intent);
         });
+        buttonOpenSavedGrades.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, SavedGrades.class);
+            startActivity(intent);
+        });
+
+
     }
 
     private String[] subjectsToStringArray() {

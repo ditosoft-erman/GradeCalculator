@@ -1,6 +1,7 @@
 package com.example.gradecalculator;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.List;
 
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder> {
 
+    private static final String TAG = "SubjectAdapter";
     private final List<Subject> subjects;
     private final MainActivity mainActivity;
 
@@ -58,14 +60,11 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
         });
     }
 
-
     private void showDeleteConfirmationDialog(int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(mainActivity);
         builder.setTitle("Delete Subject")
                 .setMessage("Are you sure you want to delete this subject?")
-                .setPositiveButton("Delete", (dialog, which) -> {
-                    removeSubject(position);
-                })
+                .setPositiveButton("Delete", (dialog, which) -> removeSubject(position))
                 .setNegativeButton("Cancel", null)
                 .show();
     }

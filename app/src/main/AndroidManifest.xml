@@ -23,6 +23,8 @@
         <activity android:name=".AddSubjectActivity" />
         <activity android:name=".termgrades.TermGrade" />
         <activity android:name=".termgrades.Midterm" />
+        <activity android:name=".termgrades.FinalTerm"/>
+        <activity android:name=".SavedGrades"/>
 
 
     </application>

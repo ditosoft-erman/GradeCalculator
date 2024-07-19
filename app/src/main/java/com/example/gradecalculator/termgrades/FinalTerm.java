@@ -10,6 +10,7 @@ public class FinalTerm extends TermGrade {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         Button btnCalculateGrades = findViewById(R.id.btnCalculateGrades);
         Button addRowLectureButton = findViewById(R.id.addRowLectureButton);
         Button addRowLaboratoryButton = findViewById(R.id.addRowLaboratoryButton);
