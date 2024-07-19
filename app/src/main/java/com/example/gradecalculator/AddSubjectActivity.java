@@ -26,7 +26,7 @@ public class AddSubjectActivity extends AppCompatActivity {
             String subjectName = editTextSubjectName.getText().toString().trim();
             if (!subjectName.isEmpty()) {
                 if (existingSubjects != null && isDuplicate(subjectName, existingSubjects)) {
-                    // Notify the user about the duplicate name
+                    // Notif    y the user about the duplicate name
                     Toast.makeText(AddSubjectActivity.this, "Subject name already exists!", Toast.LENGTH_SHORT).show();
                 } else {
                     // Proceed to create the subject

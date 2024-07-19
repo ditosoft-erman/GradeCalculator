@@ -10,6 +10,9 @@ public class Subject implements Parcelable {
     private final TermData midtermData;
     private final TermData finalTermData;
 
+    private float midtermGrade;
+    private float finalTermGrade;
+
     public Subject(String name) {
         this.name = name;
         this.midtermData = new TermData();
