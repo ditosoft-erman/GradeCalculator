@@ -10,8 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class SavedGrades extends AppCompatActivity {
 
@@ -45,17 +47,27 @@ public class SavedGrades extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("grades", MODE_PRIVATE);
         Map<String, ?> allEntries = prefs.getAll();
 
+        Set<String> processedSubjects = new HashSet<>();
+
         for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
             String key = entry.getKey();
-            if (key.endsWith("_midterm_grade") || key.endsWith("_final_grade"))  {
+            if (key.endsWith("_midterm_grade") || key.endsWith("_final_grade")) {
                 String subjectName = key.split("_")[0];
-                String midtermGrade = prefs.getString(subjectName + "_midterm_grade", "0.00%");
-                String finalTermGrade = prefs.getString(subjectName + "_final_grade", "0.00%");
 
-                Grade grade = new Grade(subjectName, midtermGrade, finalTermGrade);
-                grades.add(grade);
+
+                if (!processedSubjects.contains(subjectName)) {
+                    String midtermGrade = prefs.getString(subjectName + "_midterm_grade", "0.00%");
+                    String finalTermGrade = prefs.getString(subjectName + "_final_grade", "0.00%");
+
+                    Grade grade = new Grade(subjectName, midtermGrade, finalTermGrade);
+                    grades.add(grade);
+
+
+                    processedSubjects.add(subjectName);
+                }
             }
         }
         return grades;
     }
+
 }
