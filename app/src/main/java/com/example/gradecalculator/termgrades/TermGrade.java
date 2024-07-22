@@ -120,7 +120,17 @@ public abstract class TermGrade extends AppCompatActivity {
         double lectureGrade = gradeCalculator.calculateTableGrade(lectureTableLayout);
         double labGrade = gradeCalculator.calculateTableGrade(labTableLayout);
         double overallGrade = (2.0 / 3.0) * lectureGrade + (1.0 / 3.0) * labGrade;
+
         tvCalculatedGrades.setText(getString(R.string.calculated_grade_format, overallGrade));
+
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putFloat(subject.getName() + "_midterm_grade", (float) overallGrade);
+        editor.apply();
+    }
+
+    protected  void ftCalculateGrades(){
+
     }
 
     protected void saveData() {

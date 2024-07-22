@@ -155,7 +155,7 @@
             android:id="@+id/tvCalculatedGrades"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calculated Grade: "
+            android:text=""
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"

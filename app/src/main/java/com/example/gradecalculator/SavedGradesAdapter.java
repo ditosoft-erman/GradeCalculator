@@ -1,5 +1,8 @@
 package com.example.gradecalculator;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +20,8 @@ public class SavedGradesAdapter extends RecyclerView.Adapter<SavedGradesAdapter.
     public SavedGradesAdapter(List<Grade> savedGrades) {
         this.savedGrades = savedGrades;
     }
+
+
 
     @NonNull
     @Override

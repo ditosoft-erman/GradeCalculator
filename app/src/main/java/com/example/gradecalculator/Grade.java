@@ -5,10 +5,15 @@ public class Grade {
     private final String midtermGrade;
     private final String finalTermGrade;
 
+
+
+
+
     public Grade(String subject, String midtermGrade, String finalTermGrade) {
         this.subject = subject;
         this.midtermGrade = midtermGrade;
         this.finalTermGrade = finalTermGrade;
+
     }
 
     public String getSubject() {
@@ -22,4 +27,6 @@ public class Grade {
     public String getFinalTermGrade() {
         return finalTermGrade;
     }
+
+
 }

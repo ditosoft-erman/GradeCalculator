@@ -3,6 +3,7 @@ package com.example.gradecalculator;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +23,8 @@ public class SavedGrades extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.saved_grades);
+
+
 
         recyclerView = findViewById(R.id.recyclerViewSavedGrades);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -44,10 +47,10 @@ public class SavedGrades extends AppCompatActivity {
 
         for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
             String key = entry.getKey();
-            if (key.endsWith("_midterm_grade") || key.endsWith("_final_grade")) {
+            if (key.endsWith("_midterm_grade") || key.endsWith("_final_grade"))  {
                 String subjectName = key.split("_")[0];
-                String midtermGrade = prefs.getString(subjectName + "_midterm_grade", "N/A");
-                String finalTermGrade = prefs.getString(subjectName + "_final_grade", "N/A");
+                String midtermGrade = prefs.getString(subjectName + "_midterm_grade", "0.00%");
+                String finalTermGrade = prefs.getString(subjectName + "_final_grade", "0.00%");
 
                 Grade grade = new Grade(subjectName, midtermGrade, finalTermGrade);
                 grades.add(grade);
