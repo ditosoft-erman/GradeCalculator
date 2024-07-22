@@ -20,24 +20,26 @@ public class SavedGrades extends AppCompatActivity {
     private RecyclerView recyclerView;
     private SavedGradesAdapter adapter;
     private List<Grade> savedGrades;
-
+    private SharedPreferences prefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.saved_grades);
 
+        prefs = getSharedPreferences("grades", MODE_PRIVATE);
+        savedGrades = loadSavedGrades();
 
 
         recyclerView = findViewById(R.id.recyclerViewSavedGrades);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Initialize the saved grades list
+
         savedGrades = loadSavedGrades();
 
-        adapter = new SavedGradesAdapter(savedGrades);
+        adapter = new SavedGradesAdapter(savedGrades, prefs);
         recyclerView.setAdapter(adapter);
 
-        // Set the back button functionality
+
         Button backButton = findViewById(R.id.button_back);
         backButton.setOnClickListener(v -> finish());
     }

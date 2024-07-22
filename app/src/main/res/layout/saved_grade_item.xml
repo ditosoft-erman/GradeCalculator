@@ -2,28 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="8dp">
 
-    <TextView
-        android:id="@+id/subject_text_view"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Subject"
-        android:textSize="16sp" />
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/midterm_grade_text_view"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/subject_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/midterm_grade_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Midterm Grade"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/final_term_grade_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Final Term Grade"
+
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Midterm Grade"
+        android:text="Delete"
+        android:layout_gravity="center_vertical"
         android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/final_term_grade_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Final Term Grade"
-        android:textSize="14sp" />
-
 </LinearLayout>
